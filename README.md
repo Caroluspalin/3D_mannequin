@@ -1,54 +1,81 @@
-# React + TypeScript + Vite
+# 3D Mannequin Measurement Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive 3D mannequin visualization tool built with React, Three.js, and TypeScript. This application allows users to adjust various body measurements and see the changes reflected in real-time on a 3D mannequin model.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive 3D mannequin that rotates automatically
+- Real-time adjustment of body measurements:
+  - Height (150-200 cm)
+  - Chest (75-120 cm)
+  - Waist (60-100 cm)
+  - Hips (80-120 cm)
+  - Shoulders (35-55 cm)
+- Responsive design
+- Smooth animations and transitions
+- Real-time 3D rendering with Three.js
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- Three.js
+- TypeScript
+- Vite
+- CSS3
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd 3d-mannequin-fitting
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Usage
+
+1. The mannequin will automatically rotate to show all angles
+2. Use the sliders on the left to adjust different body measurements:
+   - Height slider adjusts the overall height
+   - Chest slider modifies the upper torso width
+   - Waist slider changes the lower torso width
+   - Hips slider adjusts the hip and leg area
+   - Shoulders slider modifies the shoulder width and arm positions
+
+## Development
+
+The main components of the application are:
+- `src/App.tsx`: Contains the main application logic and 3D rendering
+- `src/App.css`: Styles for the application
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Three.js for 3D rendering capabilities
+- React for the UI framework
+- Vite for the build tool and development server
